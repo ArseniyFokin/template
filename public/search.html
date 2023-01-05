@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <title>Search | Last.fm</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="player-bar">
+      <img class="player-bar__icon-track"
+        src="https://www.last.fm/static/images/defaults/player_default_album.430223706b14.png" />
+
+      <button class="player-bar__button player-bar__button-previous"></button>
+      <button class="player-bar__button player-bar__button-run"></button>
+      <button class="player-bar__button player-bar__button-next"></button>
+    </div>
+
+    <a href="./index.html" class="logo logo_center">
+      <img src="https://www.last.fm/static/images/logo_static.adb61955725c.png" />
+    </a>
+
+    <nav class="header__navigation">
+      <a href="https://www.last.fm/search" class="header__navigation-search"></a>
+      <a href="https://www.last.fm/dashboard" class="header__navigation-item">Live</a>
+      <a href="https://www.last.fm/music" class="header__navigation-item">Music</a>
+      <a href="https://www.last.fm/charts" class="header__navigation-item">Charts</a>
+      <a href="https://www.last.fm/events" class="header__navigation-item">Events</a>
+      <a href="https://www.last.fm/features" class="header__navigation-item">Features</a>
+      <p class="header__navigation-item header__navigation-point">•</p>
+      <a href="https://www.last.fm/features" class="header__navigation-item">Log In</a>
+      <button class="header__navigation-button">Sign Up</button>
+    </nav>
+  </header>
+
+  <main class="content content__search">
+      <form class="search__form">
+        <input class="search__form__input" placeholder="Search for music..." type="text">
+        <button class="search__form__submit" type="search"></button>
+      </form>
+      <div class="track-list">
+        <h2 class="track-list__title">Tracks</h2>
+        <table class="track-list__items">
+          <tr class="track-list__row">
+            <td class="track-list__row__play"><button class="track-list__row__play__button"></button></td>
+            <td class="track-list__row__img">
+              <img src="https://lastfm.freetls.fastly.net/i/u/64s/eb166a52aaba4578c52d3536fd919792.jpg" class="track-list__row__img__img">
+            </td>
+            <td class="track-list__row__title"><a href="https://www.last.fm/music/Arctic+Monkeys/_/Arabella">Arabella</a></td>
+            <td class="track-list__row__artist"><a href="https://www.last.fm/music/Arctic+Monkeys">Arctic Monkeys</a></td>
+            <td class="track-list__row__duration">4.58</td>
+          </tr>
+          <tr class="track-list__row">
+            <td class="track-list__row__play"><button class="track-list__row__play__button"></button></td>
+            <td class="track-list__row__img">
+              <img src="https://lastfm.freetls.fastly.net/i/u/64s/eb166a52aaba4578c52d3536fd919792.jpg" class="track-list__row__img__img">
+            </td>
+            <td class="track-list__row__title"><a href="https://www.last.fm/music/Arctic+Monkeys/_/Arabella">Arabella</a></td>
+            <td class="track-list__row__artist"><a href="https://www.last.fm/music/Arctic+Monkeys">Arctic Monkeys</a></td>
+            <td class="track-list__row__duration">4.58</td>
+          </tr>
+          <tr class="track-list__row">
+            <td class="track-list__row__play"><button class="track-list__row__play__button"></button></td>
+            <td class="track-list__row__img">
+              <img src="https://lastfm.freetls.fastly.net/i/u/64s/eb166a52aaba4578c52d3536fd919792.jpg" class="track-list__row__img__img">
+            </td>
+            <td class="track-list__row__title"><a href="https://www.last.fm/music/Arctic+Monkeys/_/Arabella">Arabella</a></td>
+            <td class="track-list__row__artist"><a href="https://www.last.fm/music/Arctic+Monkeys">Arctic Monkeys</a></td>
+            <td class="track-list__row__duration">4.58</td>
+          </tr>
+        </table>
+      </div>
+  </main>
+
+  <footer>
+    <div class="footer__top">
+      <div class="footer__top__column">
+        <h3 class="footer__top__column__title">Company</h3>
+        <ul class="footer__top__column__list">
+          <li><a href="https://www.last.fm/about" class="footer__top__column__link">About Last.fm</a></li>
+          <li><a href="https://www.last.fm/about/contact" class="footer__top__column__link">Contact Us</a></li>
+          <li><a href="https://www.last.fm/about/jobs" class="footer__top__column__link">Jobs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__top__column">
+        <h3 class="footer__top__column__title">Help</h3>
+        <ul class="footer__top__column__list">
+          <li><a href="https://www.last.fm/about/trackmymusic" class="footer__top__column__link">Track My Music</a></li>
+          <li><a href="https://support.last.fm" class="footer__top__column__link">Community Support</a></li>
+          <li><a href="https://www.last.fm/help/guidelines" class="footer__top__column__link">Community Guidelines</a></li>
+          <li><a href="https://cbsi.secure.force.com/lastfm/knowledgehome_lfm?referer=lastfm.com" class="footer__top__column__link">Help</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__top__column">
+        <h3 class="footer__top__column__title">Goodies</h3>
+        <ul class="footer__top__column__list">
+          <li><a href="https://www.last.fm/about/trackmymusic" class="footer__top__column__link">Download Scrobbler</a></li>
+          <li><a href="https://www.last.fm/api" class="footer__top__column__link">Developer API</a></li>
+          <li><a href="https://www.last.fm/music/+free-music-downloads" class="footer__top__column__link">Free Music Downloads</a></li>
+          <li><a href="https://store.last.fm" class="footer__top__column__link">Merchandise</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__top__column">
+        <h3 class="footer__top__column__title">Account</h3>
+        <ul class="footer__top__column__list">
+          <li><a href="https://www.last.fm/join" class="footer__top__column__link">Sign Up</a></li>
+          <li><a href="https://www.last.fm/login" class="footer__top__column__link">Log In</a></li>
+          <li><a href="https://www.last.fm/pro" class="footer__top__column__link">Subscribe</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__top__column">
+        <h3 class="footer__top__column__title">Follow Us</h3>
+        <ul class="footer__top__column__list">
+          <li><a href="https://www.facebook.com/lastfm" class="footer__top__column__link">Facebook</a></li>
+          <li><a href="https://twitter.com/lastfm" class="footer__top__column__link">Twitter</a></li>
+          <li><a href="https://www.instagram.com/last_fm" class="footer__top__column__link">Instagram</a></li>
+          <li><a href="https://www.youtube.com/user/lastfm" class="footer__top__column__link">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__bottom__column">
+        <ul class="footer__bottom__column__language">
+          <li><button class="footer__bottom__column__language__item--active">English</button></li>
+          <li><button class="footer__bottom__column__language__item">Deutsch</button></li>
+          <li><button class="footer__bottom__column__language__item">Español</button></li>
+          <li><button class="footer__bottom__column__language__item">Français</button></li>
+          <li><button class="footer__bottom__column__language__item">Italiano</button></li>
+          <li><button class="footer__bottom__column__language__item">日本語</abutton></li>
+          <li><button class="footer__bottom__column__language__item">Polski</button></li>
+          <li><button class="footer__bottom__column__language__item">Português</button></li>
+          <li><button class="footer__bottom__column__language__item">Русский</button></li>
+          <li><button class="footer__bottom__column__language__item">Svenska</button></li>
+          <li><button class="footer__bottom__column__language__item">Türkçe</button></li>
+          <li><button class="footer__bottom__column__language__item">简体中文</button></li>
+        </ul>
+        
+        <div class="footer__bottom__column__time-zone">
+          <p>Time zone: </p>
+          <strong>Europe/Moscow</strong>
+        </div>
+
+        <ul class="footer__bottom__column__legal">
+          <li><a href="https://www.paramount.com/brand/paramount-streaming">CBS Interactive © 2023 Last.fm Ltd. All rights reserved</a></li>
+          <li><a href="https://www.last.fm/legal/terms">Terms of Use</a></li>
+          <li><a href="https://privacy.paramount.com/ru/policy?r=www.last.fm">Privacy Policy</a></li>
+          <li><a href="https://www.last.fm/legal">Legal Policies</a></li>
+          <li><a href="https://www.last.fm/">Cookie Details</a></li>
+          <li><a href="https://careers.paramount.com/">Jobs at ViacomCBS</a></li>
+          <li><a href="https://www.last.fm/">Last.fm Music</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__bottom__column footer__bottom__column--logo">
+        <p>Audioscrobbler</p>
+        <img src="https://www.last.fm/static/images/footer_logo@2x.49ca51948b0a.png" />
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
