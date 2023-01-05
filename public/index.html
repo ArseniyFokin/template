@@ -1,37 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <title>Last.fm | Play music, find songs, and discover artists</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<body>
+  <header>
+    <div class="player-bar">
+      <img class="player-bar__icon-track" src="https://www.last.fm/static/images/defaults/player_default_album.430223706b14.png" />
+      <button class="player-bar__button player-bar__button-previous"></button>
+      <button class="player-bar__button player-bar__button-run"></button>
+      <button class="player-bar__button player-bar__button-next"></button>
+    </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <a href="./index.html" class="logo logo_center">
+      <img src="https://www.last.fm/static/images/logo_static.adb61955725c.png" />
+    </a>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <nav class="header__navigation">
+      <a href="./search.html" class="header__navigation-search"></a>
+      <a href="https://www.last.fm/dashboard" class="header__navigation-item">Live</a>
+      <a href="https://www.last.fm/music" class="header__navigation-item">Music</a>
+      <a href="https://www.last.fm/charts" class="header__navigation-item">Charts</a>
+      <a href="https://www.last.fm/events" class="header__navigation-item">Events</a>
+      <a href="https://www.last.fm/features" class="header__navigation-item">Features</a>
+      <p class="header__navigation-item header__navigation-point">•</p>
+      <a href="https://www.last.fm/features" class="header__navigation-item">Log In</a>
+      <button class="header__navigation-button">Sign Up</button>
+    </nav>
+  </header>
+
+  <main class="content">
+    <div class="content__dashboard">
+      <div class="content__dashboard__spike-artist">
+        <h2 class="content__dashboard__widget-title">Spiking Artists</h2>
+        <div class="content__dashboard__widget-intro">
+          <strong>These artists are trending globally on Last.fm right now</strong>
+          <br>
+          Click one to explore the artist and their similar artists
+        </div>
+        <div class="content__dashboard__spike-artist__list">
+          <div class="spike-artist">
+            <img class="bubble-img" src="https://lastfm.freetls.fastly.net/i/u/174s/149d5607941240dfcb5db08a7bea1e34.png"/>
+            <div class="bubble-number">1</div>
+            <a href="https://www.last.fm/music/Taylor+Swift">Taylor Swift</a>
+          </div>
+          <div class="spike-artist">
+            <img class="bubble-img" src="https://lastfm.freetls.fastly.net/i/u/174s/149d5607941240dfcb5db08a7bea1e34.png"/>
+            <div class="bubble-number">2</div>
+            <a href="https://www.last.fm/music/Taylor+Swift">Taylor Swift</a>
+          </div>
+          <div class="spike-artist">
+            <img class="bubble-img" src="https://lastfm.freetls.fastly.net/i/u/174s/149d5607941240dfcb5db08a7bea1e34.png"/>
+            <div class="bubble-number">3</div>
+            <a href="https://www.last.fm/music/Taylor+Swift">Taylor Swift</a>
+          </div>
+          <div class="spike-artist">
+            <img class="bubble-img" src="https://lastfm.freetls.fastly.net/i/u/174s/149d5607941240dfcb5db08a7bea1e34.png"/>
+            <div class="bubble-number">4</div>
+            <a href="https://www.last.fm/music/Taylor+Swift">Taylor Swift</a>
+          </div>
+          <div class="spike-artist">
+            <img class="bubble-img" src="https://lastfm.freetls.fastly.net/i/u/174s/149d5607941240dfcb5db08a7bea1e34.png"/>
+            <div class="bubble-number">5</div>
+            <a href="https://www.last.fm/music/Taylor+Swift">Taylor Swift</a>
+          </div>
+        </div>
+      </div>
+      <div class="content__dashboard__spike-track">
+        <h2 class="content__dashboard__widget-title">Spiking Tracks</h2>
+        <div class="content__dashboard__widget-intro">
+          <strong>The songs currently making the most waves across Last.fm worldwide</strong>
+        </div>
+        <div class="content__dashboard__spike-track__list">
+          <div class="spike-track">
+            <img class="spike-track__img" src="https://lastfm.freetls.fastly.net/i/u/174s/671dc8113be611c59ba151eb8e461e74.png">
+            <div class="bubble-number spike-track__number">1</div>
+            <div class="spike-track__intro">
+              <div><a class ="spike-track__title" href="https://www.last.fm/music/SZA/_/Kill+Bill">Kill Bill</a></div>
+              <div><a class ="spike-track__artist" href="https://www.last.fm/music/SZA">SZA</a></div>
+            </div>
+          </div>
+          <div class="spike-track">
+            <img class="spike-track__img" src="https://lastfm.freetls.fastly.net/i/u/174s/671dc8113be611c59ba151eb8e461e74.png">
+            <div class="bubble-number spike-track__number">2</div>
+            <div class="spike-track__intro">
+              <div><a class ="spike-track__title" href="https://www.last.fm/music/SZA/_/Kill+Bill">Kill Bill</a></div>
+              <div><a class ="spike-track__artist" href="https://www.last.fm/music/SZA">SZA</a></div>
+            </div>
+          </div>
+          <div class="spike-track">
+            <img class="spike-track__img" src="https://lastfm.freetls.fastly.net/i/u/174s/671dc8113be611c59ba151eb8e461e74.png">
+            <div class="bubble-number spike-track__number">3</div>
+            <div class="spike-track__intro">
+              <div><a class ="spike-track__title" href="https://www.last.fm/music/SZA/_/Kill+Bill">Kill Bill</a></div>
+              <div><a class ="spike-track__artist" href="https://www.last.fm/music/SZA">SZA</a></div>
+            </div>
+          </div>
+          <div class="spike-track">
+            <img class="spike-track__img" src="https://lastfm.freetls.fastly.net/i/u/174s/671dc8113be611c59ba151eb8e461e74.png">
+            <div class="bubble-number spike-track__number">4</div>
+            <div class="spike-track__intro">
+              <div><a class ="spike-track__title" href="https://www.last.fm/music/SZA/_/Kill+Bill">Kill Bill</a></div>
+              <div><a class ="spike-track__artist" href="https://www.last.fm/music/SZA">SZA</a></div>
+            </div>
+          </div>
+          <div class="spike-track">
+            <img class="spike-track__img" src="https://lastfm.freetls.fastly.net/i/u/174s/671dc8113be611c59ba151eb8e461e74.png">
+            <div class="bubble-number spike-track__number">5</div>
+            <div class="spike-track__intro">
+              <div><a class ="spike-track__title" href="https://www.last.fm/music/SZA/_/Kill+Bill">Kill Bill</a></div>
+              <div><a class ="spike-track__artist" href="https://www.last.fm/music/SZA">SZA</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer__top">
+      <div class="footer__top__column">
+        <h3 class="footer__top__column__title">Company</h3>
+        <ul class="footer__top__column__list">
+          <li><a href="https://www.last.fm/about" class="footer__top__column__link">About Last.fm</a></li>
+          <li><a href="https://www.last.fm/about/contact" class="footer__top__column__link">Contact Us</a></li>
+          <li><a href="https://www.last.fm/about/jobs" class="footer__top__column__link">Jobs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__top__column">
+        <h3 class="footer__top__column__title">Help</h3>
+        <ul class="footer__top__column__list">
+          <li><a href="https://www.last.fm/about/trackmymusic" class="footer__top__column__link">Track My Music</a></li>
+          <li><a href="https://support.last.fm" class="footer__top__column__link">Community Support</a></li>
+          <li><a href="https://www.last.fm/help/guidelines" class="footer__top__column__link">Community Guidelines</a></li>
+          <li><a href="https://cbsi.secure.force.com/lastfm/knowledgehome_lfm?referer=lastfm.com" class="footer__top__column__link">Help</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__top__column">
+        <h3 class="footer__top__column__title">Goodies</h3>
+        <ul class="footer__top__column__list">
+          <li><a href="https://www.last.fm/about/trackmymusic" class="footer__top__column__link">Download Scrobbler</a></li>
+          <li><a href="https://www.last.fm/api" class="footer__top__column__link">Developer API</a></li>
+          <li><a href="https://www.last.fm/music/+free-music-downloads" class="footer__top__column__link">Free Music Downloads</a></li>
+          <li><a href="https://store.last.fm" class="footer__top__column__link">Merchandise</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__top__column">
+        <h3 class="footer__top__column__title">Account</h3>
+        <ul class="footer__top__column__list">
+          <li><a href="https://www.last.fm/join" class="footer__top__column__link">Sign Up</a></li>
+          <li><a href="https://www.last.fm/login" class="footer__top__column__link">Log In</a></li>
+          <li><a href="https://www.last.fm/pro" class="footer__top__column__link">Subscribe</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__top__column">
+        <h3 class="footer__top__column__title">Follow Us</h3>
+        <ul class="footer__top__column__list">
+          <li><a href="https://www.facebook.com/lastfm" class="footer__top__column__link">Facebook</a></li>
+          <li><a href="https://twitter.com/lastfm" class="footer__top__column__link">Twitter</a></li>
+          <li><a href="https://www.instagram.com/last_fm" class="footer__top__column__link">Instagram</a></li>
+          <li><a href="https://www.youtube.com/user/lastfm" class="footer__top__column__link">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__bottom__column">
+        <ul class="footer__bottom__column__language">
+          <li><button class="footer__bottom__column__language__item--active">English</button></li>
+          <li><button class="footer__bottom__column__language__item">Deutsch</button></li>
+          <li><button class="footer__bottom__column__language__item">Español</button></li>
+          <li><button class="footer__bottom__column__language__item">Français</button></li>
+          <li><button class="footer__bottom__column__language__item">Italiano</button></li>
+          <li><button class="footer__bottom__column__language__item">日本語</abutton></li>
+          <li><button class="footer__bottom__column__language__item">Polski</button></li>
+          <li><button class="footer__bottom__column__language__item">Português</button></li>
+          <li><button class="footer__bottom__column__language__item">Русский</button></li>
+          <li><button class="footer__bottom__column__language__item">Svenska</button></li>
+          <li><button class="footer__bottom__column__language__item">Türkçe</button></li>
+          <li><button class="footer__bottom__column__language__item">简体中文</button></li>
+        </ul>
+        
+        <div class="footer__bottom__column__time-zone">
+          <p>Time zone: </p>
+          <strong>Europe/Moscow</strong>
+        </div>
+
+        <ul class="footer__bottom__column__legal">
+          <li><a href="https://www.paramount.com/brand/paramount-streaming">CBS Interactive © 2023 Last.fm Ltd. All rights reserved</a></li>
+          <li><a href="https://www.last.fm/legal/terms">Terms of Use</a></li>
+          <li><a href="https://privacy.paramount.com/ru/policy?r=www.last.fm">Privacy Policy</a></li>
+          <li><a href="https://www.last.fm/legal">Legal Policies</a></li>
+          <li><a href="https://www.last.fm/">Cookie Details</a></li>
+          <li><a href="https://careers.paramount.com/">Jobs at ViacomCBS</a></li>
+          <li><a href="https://www.last.fm/">Last.fm Music</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__bottom__column footer__bottom__column--logo">
+        <p>Audioscrobbler</p>
+        <img src="https://www.last.fm/static/images/footer_logo@2x.49ca51948b0a.png" />
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
